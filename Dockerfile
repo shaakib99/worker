@@ -24,4 +24,4 @@ RUN echo "PermitUserEnvironment yes" >> /etc/ssh/sshd_config
 RUN pip3 install -r requirements.txt --break-system-packages
 
 # Start SSH and FastAPI
-CMD ["/bin/bash", "-c", "/usr/sbin/sshd && fastapi run main.py"]
+CMD ["/bin/bash", "-c", "/usr/sbin/sshd && fastapi run main.py --port=6969"]
